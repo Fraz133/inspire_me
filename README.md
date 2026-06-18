@@ -1,4 +1,4 @@
-# 🎮 InspireMe — Daily Motivation App
+# InspireMe — Daily Motivation App
 
 [![Flutter Version](https://img.shields.io/badge/Flutter-%3E%3D%203.11.0-blue.svg?style=for-the-badge&logo=flutter)](https://flutter.dev)
 [![GetX State Management](https://img.shields.io/badge/State--Management-GetX-purple.svg?style=for-the-badge)](https://pub.dev/packages/get)
@@ -9,34 +9,34 @@
 
 ---
 
-## 📱 App Highlights & Technical Features
+## App Highlights & Technical Features
 
-### 🎨 Visual & Theme Engine
+### Visual & Theme Engine
 * **Modern Premium Aesthetics**: Sleek modern typography (via Google Fonts' *Outfit* & *Poppins*) mapped onto deep, harmonious HSL gradients, ambient blurred light pools, and translucent frosted glass containers.
 * **Animated Theme Transition**: Toggle between light and dark themes with a customized transition system powered by a dedicated `ThemeExtension` (`AppThemeColors`).
 * **Micro-Animations**: Uses `flutter_animate` to drive organic card entries, fade-slides, and glowing shadow transformations dynamically.
 
-### 🔄 Intelligent Content Stream
+### Intelligent Content Stream
 * **Pre-fetching Carousel**: Built on a horizontal swiping `PageView` carousel. The controller silently pre-fetches and pools new quotes in the background as the user nears the end of their stream, eliminating loading freezes.
 * **Hybrid Data Layer**: Merges daily quotes seamlessly from ZenQuotes REST API and community submissions in Cloud Firestore (50/50 pooling ratio) with robust offline fallback structures.
 
-### 🎙️ Text-to-Speech (TTS) Voice Readout
+### Text-to-Speech (TTS) Voice Readout
 * **Polished Audio Readout**: Tap the speaker icon to stream stateful voice readout of quote text and authors via `flutter_tts`.
 * **State Interruption**: The TTS player automatically interrupts and stops speech if the user swipes away to another card or navigates to a different route.
 
-### 🔒 Persistent Session Verification
+### Persistent Session Verification
 * **14-Day Inactivity Rule**: Automatically keeps user authentication active. If the app remains unopened for 14 consecutive days, the local session expires, securely logging the user out and prompting re-authentication.
 
-### 🧭 First-Time User Guided Tour
+### First-Time User Guided Tour
 * **Interactive 6-Step Onboarding**: New users are greeted by a glassmorphic tutorial highlighting controls step-by-step with bouncing overlay pointers and animated gesture tutorials.
 
-### 📤 Custom Motivational Submissions
+### Custom Motivational Submissions
 * **Community Pool Contribution**: Users can upload quotes and authors via a designated card on their profile.
 * **Direct Firestore Sync**: Submissions write directly to Firestore's global `quotes` collection and are immediately eligible for display in other users' feeds.
 
 ---
 
-## 🏗️ Clean System Architecture
+## Clean System Architecture
 
 `InspireMe` is engineered following a modular **Feature-First Architecture** combined with separated Service layers to enforce a clean separation of concerns:
 
@@ -67,7 +67,7 @@ lib/
 
 ---
 
-## 🛠️ State Management Implementation
+## State Management Implementation
 
 To satisfy professional scalability and keep widgets lightweight:
 * **State Management**: Built entirely with **GetX**, utilizing reactive observables (`.obs`) and the `Obx` widget to completely eliminate standard `setState` performance bottlenecks.
@@ -75,7 +75,7 @@ To satisfy professional scalability and keep widgets lightweight:
 
 ---
 
-## 🔥 Firebase Setup
+## Firebase Setup
 
 The application features full production-ready Firebase integration:
 
@@ -108,7 +108,7 @@ The application features full production-ready Firebase integration:
 
 ---
 
-## 🚀 Getting Started & How to Run
+## Getting Started & How to Run
 
 ### Prerequisites
 * [Flutter SDK](https://docs.flutter.dev/get-started/install) (`>= 3.11.0` recommended)
@@ -134,7 +134,7 @@ flutter run
 
 ---
 
-## ✅ Deliverables & Feature Checklist
+## Deliverables & Feature Checklist
 
 * [x] **Home Screen Center Quote**: Styled in glassmorphic cards with animated entrance.
 * [x] **"Inspire Me" Button**: Tacitly responsive button that plays chime and slides page.
