@@ -1,0 +1,66 @@
+name: inspire_me
+description: InspireMe - A Professional Daily Motivation App
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.11.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+
+  # State Management & Routing
+  get: ^4.6.6
+
+  # Firebase
+  firebase_core: ^3.13.0
+  firebase_auth: ^5.7.0
+  cloud_firestore: ^5.6.8
+  firebase_analytics: ^11.6.0
+  firebase_crashlytics: ^4.3.7
+  google_sign_in: ^6.2.2
+  image_picker: ^1.1.2
+  firebase_storage: ^12.3.7
+
+  # UI & Animations
+  google_fonts: ^6.2.1
+  flutter_animate: ^4.5.2
+  shimmer: ^3.0.0
+  flutter_staggered_animations: ^1.1.1
+  animated_text_kit: ^4.2.3
+
+  # Audio
+  audioplayers: ^6.1.0
+  flutter_tts: ^4.1.0
+
+  # Sharing
+  share_plus: ^10.1.4
+
+  # Local Storage
+  shared_preferences: ^2.3.4
+
+  # HTTP for API
+  http: ^1.2.2
+
+  # Utils
+  intl: ^0.19.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+  flutter_launcher_icons: ^0.13.1
+
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: false
+  image_path: "assets/images/app_icon.png"
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/sounds/mixkit-slide-click-1130.wav
+    - assets/images/
+

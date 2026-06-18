@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>InspireMe - Get Inspired</title>
+  
+  <!-- Modern Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,600&family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS for styling -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            poppins: ['Poppins', 'sans-serif'],
+            playfair: ['Playfair Display', 'serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Premium Animations */
+    @keyframes pulse-slow {
+      0%, 100% { transform: scale(1) translate(0px, 0px); }
+      50% { transform: scale(1.1) translate(15px, -15px); }
+    }
+    @keyframes pulse-slow-reverse {
+      0%, 100% { transform: scale(1.05) translate(0px, 0px); }
+      50% { transform: scale(0.95) translate(-10px, 20px); }
+    }
+    .animate-blob-1 {
+      animation: pulse-slow 8s infinite ease-in-out;
+    }
+    .animate-blob-2 {
+      animation: pulse-slow-reverse 10s infinite ease-in-out;
+    }
+    .glass {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .dark-glass {
+      background: rgba(10, 14, 33, 0.45);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .text-gradient {
+      background: linear-gradient(135deg, #6C63FF 0%, #00D2FF 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  </style>
+</head>
+<body class="bg-[#0A0E21] text-[#F0F0F0] font-poppins min-h-screen relative overflow-hidden flex flex-col justify-between p-6">
+  
+  <!-- Glowing Background Ambient Spheres -->
+  <div class="absolute -top-32 -left-20 w-80 h-80 rounded-full bg-[#6C63FF]/20 blur-[80px] animate-blob-1 pointer-events-none"></div>
+  <div class="absolute -bottom-20 -right-20 w-96 h-96 rounded-full bg-[#00D2FF]/15 blur-[90px] animate-blob-2 pointer-events-none"></div>
+
+  <!-- Top Logo / Brand Header -->
+  <header class="w-full max-w-lg mx-auto flex items-center justify-between z-10 py-4 opacity-90">
+    <div class="flex items-center space-x-2">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#00D2FF]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m0-12.728l.707.707m12.728 12.728l.707-.707M12 8a4 4 0 100 8 4 4 0 000-8z" />
+      </svg>
+      <span class="font-extrabold tracking-wide text-lg">InspireMe</span>
+    </div>
+    <div class="text-xs font-semibold px-3 py-1 rounded-full border border-white/10 bg-white/5 backdrop-blur-md">
+      Quote of the Day
+    </div>
+  </header>
+
+  <!-- Main Quote Card -->
+  <main class="w-full max-w-lg mx-auto flex-1 flex flex-col justify-center items-center z-10 my-8">
+    <div class="dark-glass w-full rounded-[32px] p-8 md:p-12 shadow-[0_20px_50px_rgba(0,0,0,0.3)] transition-transform duration-500 hover:scale-[1.01] flex flex-col justify-between min-h-[300px]">
+      
+      <!-- Big Quote Icon -->
+      <div class="text-[#00D2FF]/40 text-6xl font-serif leading-none mb-4 select-none">“</div>
+      
+      <!-- Quote Content -->
+      <div class="flex-1 flex flex-col justify-center">
+        <p id="quote-text" class="text-2xl md:text-3xl font-extrabold leading-relaxed text-center font-playfair tracking-wide text-white">
+          Loading quote...
+        </p>
+        <p id="quote-author" class="text-sm md:text-base font-semibold text-center italic text-[#8E8E9A] mt-6 tracking-wider">
+          
+        </p>
+      </div>
+
+      <!-- Action Footer -->
+      <div class="border-t border-white/5 pt-6 mt-8 flex justify-center items-center">
+        <span class="text-xs text-[#8E8E9A] tracking-widest uppercase">Stay Hungry. Stay Foolish.</span>
+      </div>
+    </div>
+  </main>
+
+  <!-- Bottom CTA / App Download -->
+  <footer class="w-full max-w-lg mx-auto z-10 py-6 text-center">
+    <a href="#" class="inline-flex items-center justify-center h-14 px-8 rounded-2xl bg-gradient-to-r from-[#6C63FF] to-[#00D2FF] text-white font-bold text-sm tracking-wide shadow-[0_8px_25px_rgba(108,99,255,0.4)] transition-all duration-300 hover:shadow-[0_12px_30px_rgba(108,99,255,0.6)] hover:translate-y-[-2px] active:translate-y-[1px]">
+      Get InspireMe Mobile App
+    </a>
+    <p class="text-xs text-[#8E8E9A]/60 mt-4">&copy; 2026 InspireMe. All rights reserved.</p>
+  </footer>
+
+  <!-- Script to parse query params and populate quote -->
+  <script>
+    function getQueryParam(name) {
+      const urlParams = new URLSearchParams(window.location.search);
+      return urlParams.get(name);
+    }
+
+    // Populate Quote
+    const quoteText = getQueryParam('text') || getQueryParam('q') || "The only way to do great work is to love what you do.";
+    const quoteAuthor = getQueryParam('author') || getQueryParam('a') || "Steve Jobs";
+
+    document.getElementById('quote-text').innerText = quoteText;
+    document.getElementById('quote-author').innerText = `— ${quoteAuthor}`;
+  </script>
+</body>
+</html>
